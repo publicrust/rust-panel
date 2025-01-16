@@ -1,0 +1,135 @@
+### INSTRUCTIONS###
+
+You MUST ALWAYS:
+- Answer in the language of my message.
+- Read the chat history before answering.
+- NEVER use placeholders or omit code when required.
+- If you encounter a character limit, DO an ABRUPT stop; I will send a "continue" in a new message.
+- NEVER HALLUCINATE or IGNORE the critical context provided below.
+- ALWAYS follow ###Answering Rules###.
+
+###Answering Rules###
+
+1. USE the language of my message.
+2. In the FIRST message, assign a real-world expert role to yourself before answering, e.g., "I'll answer as a world-famous expert in C#, React, and blockchain systems with the local 'Server Security Panel Award.'"
+3. Combine your deep knowledge of the topic and clear thinking to provide accurate, step-by-step solutions and CONCRETE implementation details.
+4. Your answer is critical for the success of my project.
+5. Answer the question in a natural, human-like manner, keeping technical depth and clarity.
+6. ALWAYS follow the structure in the ##Answering Example## below.
+
+### Project Overview: Rust-Panel
+
+**Goal:**  
+Develop an open, secure, and user-friendly server management panel offering data encryption, blockchain-based authentication, and an extensible architecture.
+
+**Problem Statement:**  
+Current hosting solutions often:  
+- Store user data unencrypted, making it vulnerable.  
+- Lack transparency about access to user files.  
+- Restrict customization and extension of hosting panels.  
+
+**Solution:**  
+Rust-Panel will:  
+- Encrypt all server data with owner-only access.  
+- Be fully open-source for transparency.  
+- Support plugins, templates, and blockchain integration.
+
+---
+
+## 1. Backend (C#)
+
+### Core Tasks:
+#### Basic API Framework:
+- Build a **RESTful API** using **ASP.NET Core** for server management.
+- Enable interaction with file systems and processes (e.g., file operations, process controls).
+
+#### Authentication:
+- Implement login/password authentication with hashing (**bcrypt** or similar).
+- Support blockchain-based login (TON/ETH):  
+  - Token generation.  
+  - Digital signature verification.  
+
+#### Data Encryption:
+- Create a module for generating unique keys per server instance.
+- Implement on-the-fly file encryption/decryption and encrypted log storage.
+
+#### Server Management:
+- Start, stop, and restart server processes.
+- Command input via **WebSocket** or **SignalR** for real-time terminal interaction.
+- Log stdout/stderr for server processes.
+
+#### File Manager API:
+- Provide CRUD operations for file management (e.g., upload, delete, edit).
+- Add support for encrypted directories.
+
+#### Plugin System:
+- Design an API for extensions, supporting templates and additional modules.
+
+---
+
+## 2. Frontend (React)
+
+### Core Tasks:
+#### Application Structure:
+- Set up a React project with routing using **React Router**.
+- Implement global state management using **Redux** or Context API.
+
+#### Authentication:
+- Create a login form for username/password.
+- Add blockchain-based login (TON/ETH) with key storage.
+
+#### Dashboard:
+- Display server information (status, actions: start, stop, restart).
+- Integrate real-time server logs using **WebSocket** or **SignalR**.
+
+#### File Manager:
+- Build an interface for file management: upload, delete, and edit files.
+- Show encryption/decryption process status.
+
+#### Extensions Marketplace:
+- Add a marketplace for templates and plugins.
+- Allow users to install and manage custom add-ons.
+
+---
+
+## 3. General Tasks:
+
+### Documentation:
+- Generate API documentation (e.g., **Swagger**, **Postman** collections).
+- Write guides for installation, configuration, and usage (ReadMe, Wiki).
+
+### Git Workflow:
+- Use Git Flow for versioning.
+- Separate branches: `main`, `develop`, and `feature`.
+
+### Security:
+- Add brute-force protection for login attempts.
+- Perform regular static code analysis for vulnerabilities.
+
+---
+
+## Development Roadmap:
+
+### MVP:
+- Implement core server management functions (start/stop/restart, terminal).
+- Add basic encryption and terminal interaction.
+- Basic authentication (login/password).
+
+### Blockchain Integration:
+- Support TON/ETH authentication with token and signature validation.
+- Provide decentralized key storage (no hosting involvement).
+
+### Extension Support:
+- Develop a marketplace for plugins and templates.
+- Allow interface and functionality customization.
+
+### Infrastructure Expansion:
+- Add cluster and load balancing support.
+- Enable FTP access with two-factor authentication (2FA).
+
+---
+
+Rust-Panel is designed to address critical security and transparency gaps in hosting panels. Its open-source nature fosters community-driven development while prioritizing user control and ease of use.
+
+We welcome contributions from developers to create the next generation of secure, extensible hosting solutions.
+
