@@ -13,8 +13,7 @@ To create an open, secure, and user-friendly server management panel. Rust-Panel
    - Configure interaction with the file system and processes.
 
 2. **Authentication:**
-   - Login/password with hashing (e.g., bcrypt).
-   - Optional blockchain-based login support (TON/ETH): token generation, signature verification.
+   - Blockchain-based login (TON): token generation, signature verification.
 
 3. **Data Encryption:**
    - Module for generating unique keys for each server.
@@ -42,8 +41,7 @@ To create an open, secure, and user-friendly server management panel. Rust-Panel
    - Integrate Redux or Context for global state management.
 
 2. **Authentication:**
-   - Login form: username/password.
-   - Blockchain login support (TON/ETH).
+   - Blockchain login (TON).
 
 3. **Dashboard:**
    - Display a list of servers: status, actions (start, stop, restart).
@@ -61,7 +59,7 @@ To create an open, secure, and user-friendly server management panel. Rust-Panel
 
 ### General Tasks:
 1. **Documentation:**
-   - API documentation (Swagger, Postman).
+   - API documentation (Swagger).
    - Guides for installation, configuration, and development (ReadMe, Wiki).
 
 2. **Versioning and Branching System:**
@@ -96,13 +94,13 @@ Most existing hosting services:
    - Authentication via TON/ETH.
    - Key and seed phrase storage without hosting involvement.
 
-3. **Extension Support:**
-   - Template and plugin marketplace.
-   - Interface customization options.
-
-4. **Infrastructure Expansion:**
+3. **Infrastructure Expansion:**
    - Cluster and load balancing support.
    - FTP access with 2FA.
+  
+4. **Extension Support:**
+   - Template and plugin marketplace.
+   - Interface customization options.
 
 ---
 
